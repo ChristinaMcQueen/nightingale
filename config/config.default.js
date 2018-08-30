@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = appInfo => {
     const config = exports = {};
 
@@ -6,6 +8,23 @@ module.exports = appInfo => {
 
     // add your config here
     config.middleware = [];
+    config.view = {
+        defaultViewEngine: 'ejs',
+        defaultExtension: '.ejs',
+        mapping: {
+            '.ejs': 'ejs',
+        },
+        root: [
+            path.join(appInfo.baseDir, 'app/view')
+        ].join(',')
+    };
+    config.static = {
+        prefix:'/view/assets/',
+        dir: path.join(appInfo.baseDir, 'app/view/assets')
+    };
+    config.webpack = {
+	    webpackConfigFile: 'webpack.config.js'
+    };
 
     return config;
 };

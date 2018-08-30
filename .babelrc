@@ -1,10 +1,15 @@
 {
     "presets": [
-        ["env", {
-            "modules": "commonjs"
-        }],
-        "stage-0",
-        "babel-preset-power-assert"
+        ["@babel/preset-env", {
+            "modules": "commonjs",
+            "targets": {
+                "node": "current",
+                "browsers": [
+                    "> 1%",
+                    "ie > 8"
+                ]
+            }
+        }]
     ],
     "plugins": [
         "transform-async-to-generator",

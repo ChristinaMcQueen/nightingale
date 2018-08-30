@@ -1,6 +1,6 @@
-# rabbit
+🦄🦄🦄 A Egg.js demo
 
-
+# Nightingale
 
 ## QuickStart
 
