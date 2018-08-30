@@ -1,4 +1,4 @@
-🦄🦄🦄 A Egg.js demo
+🦄🦄🦄 An Egg.js demo
 
 # Nightingale
 
